@@ -1,21 +1,15 @@
 #include <iostream>
-
 using namespace std;
 
 int testy, a, b;
 
-void nwd(int liczba1, int liczba2)
-{
+void nwd(int liczba1, int liczba2) {
     int reszta=1, dzielnik;
-    while(reszta!=0)
-    {
+    while(reszta!=0) {
         reszta = liczba1%liczba2;
-        if(reszta==0)
-        {
+        if(reszta==0) {
             dzielnik = liczba2;
-        }
-        else
-        {
+        } else {
             liczba1 = liczba2;
             liczba2 = reszta;
         }
@@ -23,14 +17,10 @@ void nwd(int liczba1, int liczba2)
     cout << dzielnik << endl;
 }
 
-int main()
-{
-
+int main() {
     cin >> testy;
-    for(int i=0; i<testy; i++)
-    {
+    for(int i=0; i<testy; i++) {
         cin >> a >> b;
         nwd(a,b);
     }
-
 }
